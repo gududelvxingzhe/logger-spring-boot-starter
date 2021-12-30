@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.loggerspringbootstarter.mapper.AnalyFieldMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.loggerspringbootstarter.domain.AnalyField">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="srcSelectField" column="src_select_field" jdbcType="VARCHAR"/>
+            <result property="srcRule" column="src_rule" jdbcType="VARCHAR"/>
+            <result property="srcKey" column="src_Key" jdbcType="BIT"/>
+            <result property="tarSelectField" column="tar_select_field" jdbcType="VARCHAR"/>
+            <result property="tarRule" column="tar_rule" jdbcType="VARCHAR"/>
+            <result property="tarKey" column="tar_key" jdbcType="BIT"/>
+            <result property="mappingConfId" column="mapping_conf_id" jdbcType="INTEGER"/>
+            <result property="testCaseId" column="test_case_id" jdbcType="INTEGER"/>
+            <result property="editUser" column="edit_user" jdbcType="VARCHAR"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="editTime" column="edit_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="deleted" column="deleted" jdbcType="BIT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,src_select_field,src_rule,
+        src_Key,tar_select_field,tar_rule,
+        tar_key,mapping_conf_id,test_case_id,
+        edit_user,create_user,edit_time,
+        create_time,deleted
+    </sql>
+</mapper>

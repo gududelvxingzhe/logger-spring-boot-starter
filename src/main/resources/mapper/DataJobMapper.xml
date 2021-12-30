@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.loggerspringbootstarter.mapper.DataJobMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.loggerspringbootstarter.domain.DataJob">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="job_id" column="job_id" jdbcType="INTEGER"/>
+            <result property="task_id" column="task_id" jdbcType="INTEGER"/>
+            <result property="case_id" column="case_id" jdbcType="INTEGER"/>
+            <result property="case_level" column="case_level" jdbcType="INTEGER"/>
+            <result property="excute_times" column="excute_times" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,job_id,task_id,
+        case_id,case_level,excute_times
+    </sql>
+</mapper>
